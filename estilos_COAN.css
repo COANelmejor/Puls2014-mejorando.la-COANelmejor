@@ -1,3 +1,48 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot');
+	src:url('fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('fonts/icomoon.woff') format('woff'),
+		url('fonts/icomoon.ttf') format('truetype'),
+		url('fonts/icomoon.svg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-down:before {
+	content: "\e601";
+	color: red;
+
+}
+.icon-arrow-up:before {
+	content: "\e602";
+	color: green;
+}
+.icon-star:before {
+	content: "\e604";
+	color: yellow;
+}
+.icon-pencil:before {
+	content: "\e600  ";
+}
+.icon-pen:before {
+	content: "\e603  ";
+}
+
 a
 {
 	color: #22BCE0;
@@ -5,8 +50,8 @@ a
 body
 {
 	background: #EEEEEE;
-	font-family: Arial;
 	font-size: 16px;
+	font-family: 'Open Sans', sans-serif;
 }
 footer
 {
@@ -61,24 +106,41 @@ header #avatar img
 	border-radius: 50%;
 	width: 55px;
 }
+header #logo
+{
+	border-right: 1px solid white;
+	padding-right: 0.5em;
+	margin-right: 0.5em;
+}
 header #logo img
 {
 	border-right: 1px solid white;
 	margin-right: 0.5em;
 	padding-right: 0.5em;
 	width: 52px;
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	-o-transition: 1s;
+	-ms-transition: 1s;
+}
+header #logo img:hover
+{
+	-webkit-transform: rotate(360deg);
+	-moz-transform: rotate(360deg;);
+	-o-transform: rotate(360deg;);
+	-ms-transform: rotate(360deg;);
 }
 nav
 {
-	background: #80BCA3;
+	background: #008FDF;
 	padding: 0 0.5em;
 	position: relative;
 }
 nav ul
 {
 	list-style: none;
+	padding: 0 6em 0 0.5em;
 	margin: 0;
-	padding: 0;
 }
 nav ul #publicar_nav
 {
@@ -177,4 +239,23 @@ nav ul li a
 #contenido .item .votacion .guardar_item
 {
 	float: right;
+}
+
+
+@media screen and (min-width: 800px){
+	#contenido
+	{
+		overflow: hidden;
+	}
+	#contenido .item
+	{
+		width: 49%;
+		float: left;
+
+	}
+	#contenido .item:nth-child(odd)
+	{
+		margin-right: 2%;
+
+	}
 }
